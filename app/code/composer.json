@@ -1,0 +1,17 @@
+{
+    "name": "avn/common-volume",
+    "require": {
+        "php": "^7.3"
+    },
+    "authors": [
+        {
+            "name": "Alex Vasechkin",
+            "email": "vasechkin.alex.v@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Avn\\CommonVolumeApp\\": "src/"
+        }
+    }
+}

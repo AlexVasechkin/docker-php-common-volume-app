@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  builder:
+    build:
+      context: ./app
+    container_name: test-volume_builder
+    volumes:
+      - test-volume:/app/code
+
+  fpm-server:
+    image: webdevops/php:7.4-alpine
+    container_name: test-volume_fpm-server
+    depends_on:
+      - builder
+    volumes:
+      - test-volume:/app
+
+volumes:
+  test-volume:

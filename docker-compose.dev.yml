@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  syncer:
+    build:
+      context: ./syncer
+    container_name: test-volume_syncer
+    command: '/root/sync.sh'
+    volumes:
+      - ./app:/tmp/app_source
+      - test-volume:/tmp/app
+    depends_on:
+      - builder
